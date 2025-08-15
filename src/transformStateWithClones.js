@@ -29,7 +29,7 @@ function transformStateWithClones(state, actions) {
         break;
 
     default:
-       return "unknown action types"
+       throw new Error('Unknown action type')
     }
     ArchiveOfState.push(stateCopy);
     currentState = stateCopy;
